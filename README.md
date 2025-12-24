@@ -1,4 +1,4 @@
-# 📚 Library Management API
+# Library Management API
 
 REST API for library book loan management system built with Spring Boot and PostgreSQL.
 
@@ -151,7 +151,7 @@ curl -X POST http://localhost:8080/api/loans \
   }'
 ```
 
-## 🗄️ Database Schema
+## Database Schema
 ```
 books
 ├── id (PK)
@@ -202,7 +202,7 @@ src/main/java/com/biblioteca/api/
 docker-compose up
 ```
 
-## 🔄 Future Improvements
+## Future Improvements
 
 - [ ] Authentication & Authorization (Spring Security)
 - [ ] API Documentation (Swagger/OpenAPI)
