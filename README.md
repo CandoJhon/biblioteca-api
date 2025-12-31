@@ -121,7 +121,7 @@ curl -X POST http://localhost:8080/api/books \
     "title": "Clean Code",
     "author": "Robert C. Martin",
     "isbn": "978-0132350884",
-    "PublicationYear": 2008,
+    "publicationYear": 2008,
     "editorial": "New Editorial",
     "available": true
   }'
@@ -147,7 +147,7 @@ curl -X POST http://localhost:8080/api/loans \
   -d '{
     "book": {"id": 1},
     "user": {"id": 1},
-    "ExpectedReturnDate": "2025-01-15"
+    "expectedReturnDate": "2025-01-15"
   }'
 ```
 
