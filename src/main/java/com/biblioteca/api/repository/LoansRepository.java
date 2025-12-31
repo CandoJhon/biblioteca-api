@@ -19,7 +19,7 @@ public interface LoansRepository extends JpaRepository<Loans, Long> {
 
     List<Loans> findByBookId(Long BookId);
 
-    @Query("SELECT p FROM Loans p WHERE p.status = 'ACTIVE' AND p.ExpectReturnDate < :date")
+    @Query("SELECT p FROM Loans p WHERE p.status = 'ACTIVE' AND p.expectReturnDate < :date")
     List<Loans> findOverdueLoans(@Param("date") LocalDate date);
 
     @Query("SELECT COUNT(p) FROM Loans p WHERE p.book.id = :bookId AND p.status = 'ACTIVE'")

@@ -33,7 +33,7 @@ public class Loans {
     private LocalDate loanDate = LocalDate.now();
 
     @Column(name = "expect_return_date", nullable = false)
-    private LocalDate ExpectReturnDate;
+    private LocalDate expectReturnDate;
 
     @Column(name = "actual_return_date")
     private LocalDate actualReturnDate;
@@ -53,9 +53,9 @@ public class Loans {
         if (loanDate == null) {
             loanDate = LocalDate.now();
         }
-        if (ExpectReturnDate == null) {
+        if (expectReturnDate == null) {
             // 14 days by default
-            ExpectReturnDate = LocalDate.now().plusDays(14);
+            expectReturnDate = LocalDate.now().plusDays(14);
         }
         if (status == null) {
             status = LoanStatus.ACTIVE;

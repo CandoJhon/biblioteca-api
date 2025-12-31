@@ -33,7 +33,7 @@ public class Book {
 
     @NotNull(message = "the year publication is required")
     @Column(name = "publication_year")
-    private Integer PublicationYear;
+    private Integer publicationYear;
 
     @Column(length = 100)
     private String editorial;
