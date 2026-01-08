@@ -27,43 +27,45 @@
 ## Architecture
 
 ```
-graph TB
-    subgraph "Client Layer"
-        Client[API Consumer<br/>Postman/Browser/Mobile]
-    end
+    mermaid
+    graph TB
+        subgraph "Client Layer"
+            Client[API Consumer<br/>Postman/Browser/Mobile]
+        end
+        
+        subgraph "Application Layer - Spring Boot"
+            Controllers[Controllers<br/>REST Endpoints]
+            Services[Services<br/>Business Logic]
+            Repositories[Repositories<br/>Data Access]
+        end
+        
+        subgraph "Data Layer"
+            DB[(PostgreSQL 15<br/>Database)]
+        end
+        
+        subgraph "Infrastructure"
+            Docker[Docker Container<br/>Application]
+            DBDocker[Docker Container<br/>PostgreSQL]
+        end
+        
+        Client -->|HTTP/REST| Controllers
+        Controllers -->|Delegate| Services
+        Services -->|Call| Repositories
+        Repositories -->|JPA/Hibernate| DB
+        
+        Docker -.->|Runs| Controllers
+        Docker -.->|Runs| Services
+        Docker -.->|Runs| Repositories
+        DBDocker -.->|Hosts| DB
+        
+        style Client fill:#e1f5ff
+        style Controllers fill:#fff4e1
+        style Services fill:#ffe1f5
+        style Repositories fill:#e1ffe1
+        style DB fill:#f0f0f0
+        style Docker fill:#e8f4f8
+        style DBDocker fill:#e8f4f8
     
-    subgraph "Application Layer - Spring Boot"
-        Controllers[Controllers<br/>REST Endpoints]
-        Services[Services<br/>Business Logic]
-        Repositories[Repositories<br/>Data Access]
-    end
-    
-    subgraph "Data Layer"
-        DB[(PostgreSQL 15<br/>Database)]
-    end
-    
-    subgraph "Infrastructure"
-        Docker[Docker Container<br/>Application]
-        DBDocker[Docker Container<br/>PostgreSQL]
-    end
-    
-    Client -->|HTTP/REST| Controllers
-    Controllers -->|Delegate| Services
-    Services -->|Call| Repositories
-    Repositories -->|JPA/Hibernate| DB
-    
-    Docker -.->|Runs| Controllers
-    Docker -.->|Runs| Services
-    Docker -.->|Runs| Repositories
-    DBDocker -.->|Hosts| DB
-    
-    style Client fill:#e1f5ff
-    style Controllers fill:#fff4e1
-    style Services fill:#ffe1f5
-    style Repositories fill:#e1ffe1
-    style DB fill:#f0f0f0
-    style Docker fill:#e8f4f8
-    style DBDocker fill:#e8f4f8
 ```
 
 ### Tech Stack
