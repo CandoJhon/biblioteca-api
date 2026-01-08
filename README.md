@@ -27,23 +27,22 @@
 ## Architecture
 
 ```
-mermaid
-graph TB
- subgraph subGraph0["Client Layer"]
+flowchart TB
+    subgraph subGraph0["Client Layer"]
         Client["API Consumer<br>Postman/Browser/Mobile"]
-  end
- subgraph subGraph1["Application Layer - Spring Boot"]
+    end
+    subgraph subGraph1["Application Layer - Spring Boot"]
         Controllers["Controllers<br>REST Endpoints"]
         Services["Services<br>Business Logic"]
         Repositories["Repositories<br>Data Access"]
-  end
- subgraph subGraph2["Data Layer"]
-        DB[("PostgreSQL 15<br>Database")]
-  end
- subgraph Infrastructure["Infrastructure"]
+    end
+    subgraph subGraph2["Data Layer"]
+        DB[(PostgreSQL 15<br>Database)]
+    end
+    subgraph Infrastructure["Infrastructure"]
         Docker["Docker Container<br>Application"]
         DBDocker["Docker Container<br>PostgreSQL"]
-  end
+    end
     Client -- HTTP/REST --> Controllers
     Controllers -- Delegate --> Services
     Services -- Call --> Repositories
@@ -58,7 +57,6 @@ graph TB
     style DB fill:#f0f0f0,color:#2962FF
     style Docker fill:#e8f4f8,color:#2962FF
     style DBDocker fill:#e8f4f8,color:#2962FF
-    
 ```
 
 ### Tech Stack
