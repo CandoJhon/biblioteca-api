@@ -11,7 +11,7 @@
 
 ---
 
-## 🎯 Project Highlights
+## Project Highlights
 
 - ✅ **Full CRUD Operations** for Books, Users, and Loans
 - ✅ **Automated Testing** with 98% code coverage (JaCoCo + Mockito)
@@ -367,7 +367,7 @@ curl -X POST http://localhost:8080/api/loans/1/return
 
 ---
 
-## 🗄️ Database Schema
+## Database Schema
 
 ```sql
 books
@@ -401,7 +401,7 @@ loans
 
 ---
 
-## 🎯 Key Design Decisions
+## Key Design Decisions
 
 ### Why Spring Boot?
 Enterprise-grade framework with robust ecosystem for building production-ready REST APIs with minimal configuration.
@@ -428,7 +428,7 @@ Automated workflow that:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 biblioteca-api/
@@ -562,7 +562,7 @@ docker compose exec postgres psql -U postgres -d biblioteca
 
 ---
 
-## 🚦 CI/CD Pipeline
+## CI/CD Pipeline
 
 The project uses **GitHub Actions** for automated CI/CD:
 
@@ -629,19 +629,19 @@ This project demonstrates:
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 👤 Author
+## Author
 
 **Jhon Cando**
 
-- 🌐 LinkedIn: [linkedin.com/in/jhon-cando](https://linkedin.com/in/jhon-cando)
-- 💻 GitHub: [@CandoJhon](https://github.com/CandoJhon)
-- 📧 Email: john_jm@outlook.com
+- LinkedIn: [linkedin.com/in/jhon-cando](https://linkedin.com/in/jhon-cando)
+- GitHub: [@CandoJhon](https://github.com/CandoJhon)
+- Email: john_jm@outlook.com
 
 ---
 
@@ -655,7 +655,7 @@ Contributions, issues, and feature requests are welcome!
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Spring Boot community for excellent documentation
 - PostgreSQL team for a robust database system
