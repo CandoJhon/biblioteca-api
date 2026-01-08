@@ -27,7 +27,7 @@
 ## Architecture
 
 ```
-flowchart TB
+graph TB
  subgraph subGraph0["Client Layer"]
         Client["API Consumer<br>Postman/Browser/Mobile"]
   end
